@@ -1,11 +1,22 @@
 import Layout from './layout/Layout';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
+import Home from './pages/Home/Home';
+import NotFound from './pages/NotFound';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <Layout>
-      <ItemListContainer greeting="¡Bienvenido a MiTienda! Descubrí nuestros productos exclusivos." />
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
     </Layout>
+    </BrowserRouter>
   );
 }
 

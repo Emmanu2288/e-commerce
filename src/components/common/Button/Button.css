@@ -1,0 +1,14 @@
+.btn {
+  min-width: 40px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #002a6a;
+  color: rgb(255, 255, 255);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}

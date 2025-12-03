@@ -1,0 +1,9 @@
+.img-fluid {
+  object-fit: contain;
+  max-height: 420px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}

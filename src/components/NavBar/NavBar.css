@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #212529; 
+}
+
+.navbar-brand img {
+  max-height: 100px;
+}
+
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+.nav-link.active {
+  font-weight:lighter;
+  text-decoration: underline;
+}
