@@ -89,7 +89,6 @@ MiTienda es una aplicación de e‑commerce desarrollada con **React + Vite**, q
 📄 vite.config.js
 ```
 
-
 ## 🧠 Cómo usar
 
 1. Cloná el repositorio o descargá los archivos.
