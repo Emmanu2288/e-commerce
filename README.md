@@ -104,12 +104,12 @@ npm install
  * Copiar las credenciales en `src/utils/Firebase/firebase.js` (en este caso al estar en .env  ***reemplazarlas*** por las siguientes)
  ```bash
 const firebaseConfig = {
-  apiKey: "AIzaSyBZICQM_5fwKiZDrk3oauIIGfciN66Qbf0",
-  authDomain: "e-commerce-react-js-54941.firebaseapp.com",
-  projectId: "e-commerce-react-js-54941",
-  storageBucket: "e-commerce-react-js-54941.firebasestorage.app",
-  messagingSenderId: "43076122340",
-  appId: "1:43076122340:web:a65e38cc191541ca219ef1"
+  apiKey: "-------",
+  authDomain: "------",
+  projectId: "------",
+  storageBucket: "-----",
+  messagingSenderId: "-------",
+  appId: "------"
 };
  ```
 4. Ejecutar en desarrollo:
