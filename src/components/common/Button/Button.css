@@ -1,14 +1,31 @@
-.btn {
-  min-width: 40px;
-  font-weight: bold;
+/* Estilo CTA genérico para todos los botones */
+.btn-cta {
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  text-decoration: none;
 }
 
-.btn-primary {
-  background-color: #002a6a;
-  color: rgb(255, 255, 255);
+/* Hover CTA: se aplica a todos los colores */
+.btn-cta:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
-.btn-danger {
-  background-color: #dc3545;
+/* Azul oscuro para Ver detalle */
+.btn-darkblue {
+  background-color: #0b3d91; 
+  border: none;
   color: white;
+}
+
+.btn-darkblue:hover {
+  background-color: #072f6b;
 }

@@ -1,40 +1,27 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import ItemDetail from '../../components/common/ItemDetail/ItemDetail';
-import Spinner from '../../components/common/Spinner/Spinner';
+import { useParams } from "react-router-dom";
+import ItemDetail from "../../components/common/ItemDetail/ItemDetail";
+import Spinner from "../../components/common/Spinner/Spinner";
+import Button from "../../components/common/Button/Button";
+import { useFetchProducts } from "../../hooks/useFetchProducts";
+import { getProductById } from "../../services/productService";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const [status, setStatus] = useState('loading');
 
-  const fetchProduct = () => {
-    setStatus('loading');
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then(res => {
-        if (!res.ok) throw new Error('Network error');
-        return res.json();
-      })
-      .then(data => {
-        setProduct(data);
-        setStatus('ready');
-      })
-      .catch(() => setStatus('error'));
-    };
+  const fetchFn = () => getProductById(id);
 
-    useEffect(() => {
-    fetchProduct();
-  }, [id]);
+  const { data: product, status, refetch } = useFetchProducts(fetchFn, [id]);
 
-  if (status === 'loading') return <Spinner />;
-  if (status === 'error') return (
-    <div className="text-center py-5">
+  if (status === "loading") return <Spinner />;
+  if (status === "error")
+    return (
+      <div className="text-center py-5">
         <p>Error al cargar el producto.</p>
-        <button className="btn btn-danger" onClick={fetchProduct}>
+        <Button variant="danger" onClick={refetch}>
           Reintentar
-        </button>
+        </Button>
       </div>
-  );
+    );
 
   return product ? <ItemDetail product={product} /> : null;
 };

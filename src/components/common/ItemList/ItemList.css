@@ -1,3 +1,9 @@
+/* Contenedor principal de las cards */
+.item-list-container {
+  margin: 60px; 
+}
+
+/* Animación de las cards */
 .card {
   transition: transform 0.2s ease;
 }
@@ -6,6 +12,7 @@
   transform: scale(1.03);
 }
 
+/* Imagen de la card */
 .card-img-top {
   object-fit: contain;
   height: 200px;

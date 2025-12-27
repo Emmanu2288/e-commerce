@@ -1,9 +1,17 @@
-.img-fluid {
+/* Contenedor principal del detalle */
+.item-detail-container {
+  margin-top: 60px; 
+  margin-left: 60px;
+}
+
+/* Imagen del producto */
+.product-image {
   object-fit: contain;
   max-height: 420px;
 }
 
-h2 {
+/* Título del producto */
+.item-detail-container h2 {
   font-size: 1.8rem;
   font-weight: bold;
 }
